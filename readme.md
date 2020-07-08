@@ -1,1 +1,2 @@
-IPL - Predicting Target
+# IPL - Predicting Target
+![Python 3.7.4](https://img.shields.io/badge/Python-3.7.4-brightgreen.svg) ![scikit-learnn](https://img.shields.io/badge/Library-Scikit_Learn-orange.svg) ![Pandas](https://img.shields.io/badge/pandas-package-orange)
