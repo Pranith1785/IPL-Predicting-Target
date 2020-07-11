@@ -5,13 +5,129 @@
 <head>
     <meta charset="utf-8">
     <title>Predict Score</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-        <h4>Welcome to IPL Score Prediction</h4>
+        <h2>Welcome to IPL Score Prediction</h2>
+        <p>Developed in Machine learning and built in Flask</p>
     </div>
+    <div class='left-slideshow'>
+        <div class='slider-frame'>
+
+            <div class='slide-images-up'>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='csk.jpg')}}" alt="CSK">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='dc.jpg')}}" alt="DC">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='kkr.png')}}" alt="KKR">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='kxip.png')}}" alt="KXIP">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='mi.png')}}" alt="MI">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='rcb.jpg')}}" alt="RCB">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='rr.jpg')}}" alt="RR">
+                </div>
+                <div class='image-container'>
+                    <img class='image-style' , src="{{ url_for('static',filename='srh.png')}}" alt="SRH">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class='center'>
+        <form action="" method="POST">
+
+            <select name="batting_team" id="batting_team">
+                <option value="none">--- Select a Batting team ---</option>
+                <option value="MI">Mumbai Indians</option>
+                <option value="KKR">Kolkata Knight Riders</option>
+                <option value="CSK">Chennai Super Kings</option>
+                <option value="RR">Rajasthan Royals</option>
+                <option value="KXIP">Kings XI Punjab</option>
+                <option value="RCB">Royal Challengers Bangalore</option>
+                <option value="DC">Delhi Capitals</option>
+                <option value="SRH">Sunrisers Hyderabad</option>
+            </select>
+            <br>
+            <select name="bowling_team" id="bowling_team">
+                <option value="none">--- Select a Bowling team ---</option>
+                <option value="MI">Mumbai Indians</option>
+                <option value="KKR">Kolkata Knight Riders</option>
+                <option value="CSK">Chennai Super Kings</option>
+                <option value="RR">Rajasthan Royals</option>
+                <option value="KXIP">Kings XI Punjab</option>
+                <option value="RCB">Royal Challengers Bangalore</option>
+                <option value="DC">Delhi Capitals</option>
+                <option value="SRH">Sunrisers Hyderabad</option>
+            </select>
+            <br>
+            <input type="text" name='overs' placeholder="overs"><br>
+            <input class="slider" type="range" min="1" max="6" value="5" id="myRange"><br>
+            <input type="text" name='curr_score' placeholder="current score"><br>
+            <input type="text" name='wickets' placeholder="wickest lost"><br>
+            <input type="text" name='last5o_runs' placeholder="Last 5overs runs scored"><br>
+            <input type="text" name='last5o_wkts' placeholder="Last 5overs wickets lost"><br>
+            <select name="venue" id="venue">
+                <option value="none">--- Select a stadium ---</option>
+                <option value="Barabati">Barabati</option>
+                <option value="Brabourne">Brabourne</option>
+                <option value="BuffaloPark">BuffaloPark</option>
+                <option value="DICS">DICS</option>
+                <option value="DYPSA">DYPSA</option>
+                <option value="DeBeersDiamond">DeBeersDiamond</option>
+                <option value="Eden">Eden</option>
+                <option value="FSK">FSK</option>
+                <option value="FSKG">FSKG</option>
+                <option value="GeorgePark">GeorgePark</option>
+                <option value="GreenPark">GreenPark</option>
+                <option value="HCS">HCS</option>
+                <option value="HPCAS">HPCAS</option>
+                <option value="JSCAISC">JSCAISC</option>
+                <option value="Kingsmead">Kingsmead</option>
+                <option value="MACS">MACS</option>
+                <option value="MCAS">MCAS</option>
+                <option value="MCS">MCS</option>
+                <option value="NewWanderers">NewWanderers</option>
+                <option value="Newlands">Newlands</option>
+                <option value="OUTsurance">OUTsurance</option>
+                <option value="PCAS">PCAS</option>
+                <option value="RGIS">RGIS</option>
+                <option value="SCAS">SCAS</option>
+                <option value="SMS">SMS</option>
+                <option value="SPS">SPS</option>
+                <option value="SRSS">SRSS</option>
+                <option value="SVNSIS">SVNSIS</option>
+                <option value="SZS">SZS</option>
+                <option value="Sharjah">Sharjah</option>
+                <option value="SuperSport">SuperSport</option>
+                <option value="VCAS">VCAS</option>
+                <option value="WS">WS</option>
+                <option value="YSRACACS">YSRACACS</option>
+            </select>
+            <input type="submit" class="myButton" value="Predict Score">
+
+        </form>
+
+    </div>
+
+
 </body>
 
 </html>
