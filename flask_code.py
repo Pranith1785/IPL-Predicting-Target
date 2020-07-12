@@ -74,8 +74,8 @@ def predict():
         ##Apply the new data on loaded model
         data_array = np.array([data_array])
         score = model.predict(data_array)[0]
-    
-    return render_template('result.html',score=score)
+        score = int(score)
+    return render_template('result.html',lower_score=score-4,upper_score = score+4)
 
 
 if __name__ == '__main__':
